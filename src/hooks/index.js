@@ -57,7 +57,7 @@ export const useProjects = () => {
   useEffect(() => {
     firebase
       .firestore()
-      .collections('projects')
+      .collection('projects')
       .where('userId', '==', '')
       .orderBy('projectId')
       .get()
